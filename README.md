@@ -128,3 +128,61 @@
 |  | content | 답변 내용 |  |
 |  | create_date | 작성 날짜 |  |
 |  | board_id | Board FK |  |
+
+
+## API 엔드포인트 목록
+
+### 인증 인가 관련 API
+
+| HTTP 메서드 | 경로 | 설명 |
+| --- | --- | --- |
+| GET | /auth2/login | 로그인  |
+| GET | /auth2/logout | 로그아웃 |
+| GET | /auth2/signup | 회원가입 페이지 요청 |
+| POST | /auth2/signup | 회원가입 등록 |
+| GET | /admin/auth2/signup | admin 계정 로그인 |
+| POST | /auth2/withdraw | 회원탈퇴  |
+| GET | /auth2/profile | 마이페이지  |
+| POST | /auth2/modify-profile | 회원정보 수정  |
+| GET | /auth2/reset-pwd | 비밀번호 찾기 요청(비밀번호 초기화) |
+
+### 게시판 관련 API
+
+| HTTP 메서드 | 경로 | 설명 |
+| --- | --- | --- |
+| GET | /board | 게시판 페이지 |
+| GET | /board/list | 게시글 목록 조회 |
+| GET | /board/register | 게시글 등록 페이지 |
+| POST | /board/register | 게시글 등록 |
+| GET | /board/read/{id} | 게시글 조회 |
+| DELETE | /board/delete/{id} | 게시글 삭제 |
+
+### 아이템 관련 API
+
+| HTTP 메서드 | 경로 | 설명 |
+| --- | --- | --- |
+| GET | /item | 아이템 조회 |
+| POST | /item | 아이템 생성 |
+| GET | /item/detail/{itemId} | 아이템 상세 조회 |
+| GET | /item/remove/{itemId} | 아이템 삭제 |
+| GET | /item/register | 아이템 등록 페이지 조회 |
+| POST | /item/register | 아이템 등록 |
+| GET | /item/update/{itemId} | 아이템 수정 페이지 조회 |
+| POST | /item/update/{itemId} | 아이템 수정 |
+
+### 검색 관련 API
+
+| HTTP 메서드 | 경로 | 설명 |
+| --- | --- | --- |
+| GET | /search | 검색 |
+| GET | /search-success | 검색 성공 |
+| GET | /search-fail | 검색 실패 |
+
+### 게시판 관련 API
+
+| HTTP 메서드 | 경로 | 설명 |
+| --- | --- | --- |
+| GET | /board/register | 게시글 작성 페이지 |
+| POST | /board/register | 게시글 등록 |
+| GET | /board/read | 게시글 조회 |
+| POST | /board/delete | 게시글 삭제 |
